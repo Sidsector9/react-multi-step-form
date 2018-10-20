@@ -1,0 +1,175 @@
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #f1f3f5;
+    font-family: 'Krub', sans-serif;
+    color: #678;
+}
+
+body {
+    padding-top: 3rem;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 200;
+    margin-top: 2.5rem;
+    font-size: 1.75rem;
+}
+
+h1 span {
+    font-weight: 600;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(77, 90, 102);
+}
+
+/* Utility CSS */
+.hidden {
+    display: none;
+}
+
+.active-tab {
+    font-weight: bold;
+    border-bottom: 1px solid #77dab2;
+}
+
+.visited {
+    position: relative;
+    border-bottom: 1px solid #77dab2;
+}
+
+.active-tab:before,
+.visited:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    top: calc( 100% - 2px );
+    right: -.15rem;
+    background-color: #77dab2;
+}
+
+.active-step {
+    display: block !important;
+}
+
+.required-field {
+    border: 1px solid #f64b4b ;
+    background-color: rgba(246, 75, 75, 0.1);
+}
+
+/* Multi Step Form App */
+.mform-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.mform-navigation li {
+    padding: .5rem .5rem;
+    cursor: pointer;
+}
+
+.mform-navigation li:first-child {
+    padding-left: 0;
+}
+
+.mform-navigation li:last-child {
+    padding-right: 0;
+}
+
+.multi-step-form-app {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 6px 8px rgba(102,119,136,.03), 0 1px 2px rgba(102,119,136,.3);
+}
+
+input:not( [type="submit"] ):not( [type="radio"] ) {
+    display: block;
+    padding: .85rem .5rem;
+    width: 100%;
+    margin: .75rem 0;
+    font-size: 1rem;
+}
+
+.mform-navigation-buttons {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.mform-gender {
+    margin-top: 2rem;
+}
+
+.mform-gender label {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.mform-navigation-buttons button,
+.mform-navigation-buttons input {
+    box-shadow: 0 1px 1px rgba(102,119,136,.55);
+    text-shadow: 0 1px 1px rgba(51,68,85,.3);
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    font-size: 1rem;
+    padding: .75rem 1.5rem;
+    cursor: pointer;
+}
+
+.mform-navigation-buttons button {
+    background: linear-gradient(15deg,#745fb5,#9a6dbb);
+}
+
+.mform-navigation-buttons input {
+    background: linear-gradient(15deg,#14af83,#15b89a);
+}
+
+.mform-navigation-buttons button:last-child,
+.mform-navigation-buttons input:last-child {
+    margin-left: auto;
+}
+
+.mform-github-logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 64px;
+    cursor: pointer;
+}
+
+.mform-github-logo path {
+    fill: #678;
+}
+
+.mform-github-logo:hover path {
+    fill: rgb(77, 90, 102);
+}
+
+.mform-author-name {
+    margin-top: 1.5rem;
+    text-align: center;
+}
